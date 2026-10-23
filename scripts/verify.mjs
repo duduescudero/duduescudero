@@ -12,7 +12,8 @@ for (const project of ['fluxo-os','meu-onze','orbita-verde','pokeidle-manager'])
   assert.equal(info.height,660);
 }
 assert.equal((readme.match(/^### /gm) ?? []).length,4,'Os quatro projetos precisam ter a mesma hierarquia.');
-assert(!/projeto principal|featured project|linkedin\.com|duduescuderoo/i.test(readme));
+assert(!/projeto principal|featured project|eduardo-escudero-09du|duduescuderoo/i.test(readme));
+assert(readme.includes('https://www.linkedin.com/in/eduardo-pires-escudero/'));
 for (const theme of ['dark','light']) {
   const panel = await readFile(`assets/activity/summary-${theme}.svg`,'utf8');
   const snake = await readFile(`assets/activity/snake-${theme}.svg`,'utf8');
