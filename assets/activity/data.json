@@ -1,0 +1,56 @@
+{
+  "updated": "23/10/2026",
+  "totalContributions": 30,
+  "activeDays": 6,
+  "publicRepositories": 6,
+  "languages": [
+    {
+      "name": "TypeScript",
+      "bytes": 362802
+    },
+    {
+      "name": "C#",
+      "bytes": 313697
+    },
+    {
+      "name": "JavaScript",
+      "bytes": 157806
+    },
+    {
+      "name": "CSS",
+      "bytes": 149633
+    },
+    {
+      "name": "Astro",
+      "bytes": 40716
+    },
+    {
+      "name": "Java",
+      "bytes": 37996
+    },
+    {
+      "name": "PowerShell",
+      "bytes": 36275
+    },
+    {
+      "name": "HTML",
+      "bytes": 22815
+    },
+    {
+      "name": "Python",
+      "bytes": 13371
+    },
+    {
+      "name": "Dockerfile",
+      "bytes": 641
+    },
+    {
+      "name": "Shell",
+      "bytes": 425
+    },
+    {
+      "name": "Batchfile",
+      "bytes": 189
+    }
+  ]
+}
