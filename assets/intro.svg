@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="64" viewBox="0 0 600 64" role="img"><title>Interfaces, APIs e dados. Aprender. Construir. Evoluir.</title><style>
+  text{font:23px Consolas,monospace;fill:#a88ae9;text-anchor:middle}
+  .a,.b{opacity:0}.c{opacity:1}
+  .a{animation:one 5s both}.b{animation:two 5s both}.c{animation:three 5s both}
+  @keyframes one{0%,25%{opacity:1}32%,100%{opacity:0}}
+  @keyframes two{0%,30%{opacity:0}38%,61%{opacity:1}69%,100%{opacity:0}}
+  @keyframes three{0%,65%{opacity:0}76%,100%{opacity:1}}
+  @media(prefers-reduced-motion:reduce){.a,.b{animation:none;opacity:0}.c{animation:none;opacity:1}}
+  </style><text class="a" x="300" y="40">Interfaces que conectam ideias.</text><text class="b" x="300" y="40">APIs, dados e aplicações completas.</text><text class="c" x="300" y="40">Aprender. Construir. Evoluir.</text></svg>
