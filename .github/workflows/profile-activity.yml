@@ -1,0 +1,49 @@
+name: Atualizar atividade do perfil
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 9 * * *'
+  push:
+    branches: [main]
+    paths: ['scripts/update-activity.mjs', 'scripts/finish-snake.mjs', '.github/workflows/profile-activity.yml']
+permissions:
+  contents: read
+concurrency:
+  group: profile-activity
+  cancel-in-progress: false
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24'
+      - name: Gerar indicadores reais
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/update-activity.mjs
+      - name: Gerar cobrinha com cores do perfil
+        uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3
+        with:
+          github_user_name: duduescudero
+          outputs: |
+            assets/activity/snake-dark.svg?palette=github-dark&color_snake=#c7a6ff&color_dots=#1d1a29,#39274f,#674590,#9870c8,#c6a0f8
+            assets/activity/snake-light.svg?palette=github-light&color_snake=#673daa&color_dots=#eee9f5,#e1d2f6,#bd9fe4,#9269c8,#673daa
+      - name: Preparar alternativa de movimento reduzido
+        run: node scripts/finish-snake.mjs
+      - name: Salvar somente os arquivos de atividade
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/activity/
+          if ! git diff --cached --quiet; then
+            git commit -m 'chore: atualiza atividade pública do perfil'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
