@@ -4,7 +4,7 @@ import sharp from 'sharp';
 
 const readme = await readFile('README.md','utf8');
 for (const match of readme.matchAll(/(?:src|srcset)="([^"]+)"/g)) {
-  if (!/^https?:/.test(match[1])) await access(match[1]);
+  if (!/^https?:/.test(match[1])) await access(match[1].split(/[?#]/)[0]);
 }
 for (const project of ['fluxo-os','meu-onze','orbita-verde','pokeidle-manager']) {
   const info = await sharp(`assets/projects/${project}.png`).metadata();

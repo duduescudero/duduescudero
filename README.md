@@ -5,7 +5,7 @@
 
 <p align="center">
   <a href="https://duduescudero.github.io/"><img src="assets/buttons/portfolio.svg" width="160" height="44" alt="Abrir meu portfólio" /></a>
-  <a href="https://www.linkedin.com/in/eduardo-pires-escudero/"><img src="assets/buttons/linkedin.svg" width="155" height="44" alt="Conhecer meu perfil no LinkedIn" /></a>
+  <a href="https://www.linkedin.com/in/eduardo-pires-escudero/"><img src="assets/buttons/linkedin.svg?v=2" width="155" height="44" alt="Conhecer meu perfil no LinkedIn" /></a>
   <a href="mailto:eduardoescudero911@gmail.com"><img src="assets/buttons/email.svg" width="140" height="44" alt="Entrar em contato por e-mail" /></a>
   <a href="https://github.com/duduescudero?tab=repositories"><img src="assets/buttons/repositories.svg" width="190" height="44" alt="Explorar meus repositórios" /></a>
 </p>

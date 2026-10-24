@@ -35,7 +35,7 @@ await writeFile('assets/intro.svg', svg(600, 64, `<style>
 
 const buttons = [
   ['portfolio', 'PORTFÓLIO', 160, '<circle cx="22" cy="22" r="8"/><path d="M14 22h16M22 14c-5 5-5 11 0 16M22 14c5 5 5 11 0 16"/>'],
-  ['linkedin', 'LINKEDIN', 155, '<path d="M15 20v11m0-16v.1m6 16V20h4v2c1-3 6-3 6 2v7m-6 0v-7"/>'],
+  ['linkedin', 'LINKEDIN', 155, '<g stroke="none"><rect x="13" y="13" width="18" height="18" rx="2" fill="#ccb7ff"/><g fill="#21182f"><circle cx="17.5" cy="17.5" r="1.25"/><path d="M16.4 20h2.2v8h-2.2zM21 20h2.2v1.1c1-1.8 5-1.8 5 2V28H26v-4.7c0-1.8-2.8-1.8-2.8 0V28H21z"/></g></g>'],
   ['email', 'E-MAIL', 140, '<rect x="13" y="16" width="18" height="13" rx="2"/><path d="m14 17 8 6 8-6"/>'],
   ['repositories', 'REPOSITÓRIOS', 190, '<path d="m17 16-6 6 6 6m10-12 6 6-6 6m-4-15-4 18"/>'],
 ];
