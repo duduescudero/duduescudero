@@ -1,8 +1,8 @@
 {
-  "updated": "03/11/2026",
-  "totalContributions": 56,
-  "activeDays": 17,
-  "publicRepositories": 7,
+  "updated": "04/11/2026",
+  "totalContributions": 97,
+  "activeDays": 18,
+  "publicRepositories": 8,
   "languages": [
     {
       "name": "TypeScript",
@@ -10,15 +10,19 @@
     },
     {
       "name": "C#",
-      "bytes": 313697
+      "bytes": 390004
     },
     {
       "name": "JavaScript",
-      "bytes": 173149
+      "bytes": 182667
     },
     {
       "name": "CSS",
       "bytes": 150014
+    },
+    {
+      "name": "PowerShell",
+      "bytes": 113711
     },
     {
       "name": "Astro",
@@ -27,10 +31,6 @@
     {
       "name": "Java",
       "bytes": 37996
-    },
-    {
-      "name": "PowerShell",
-      "bytes": 36275
     },
     {
       "name": "HTML",
