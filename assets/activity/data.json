@@ -1,20 +1,24 @@
 {
-  "updated": "18/11/2026",
-  "totalContributions": 114,
-  "activeDays": 33,
-  "publicRepositories": 8,
+  "updated": "19/11/2026",
+  "totalContributions": 124,
+  "activeDays": 34,
+  "publicRepositories": 12,
   "languages": [
     {
-      "name": "TypeScript",
-      "bytes": 420499
+      "name": "Jupyter Notebook",
+      "bytes": 644258
     },
     {
       "name": "C#",
-      "bytes": 390004
+      "bytes": 467586
+    },
+    {
+      "name": "TypeScript",
+      "bytes": 449778
     },
     {
       "name": "JavaScript",
-      "bytes": 182667
+      "bytes": 183094
     },
     {
       "name": "CSS",
@@ -23,6 +27,10 @@
     {
       "name": "PowerShell",
       "bytes": 113711
+    },
+    {
+      "name": "Python",
+      "bytes": 70701
     },
     {
       "name": "Astro",
@@ -37,12 +45,12 @@
       "bytes": 22815
     },
     {
-      "name": "Python",
-      "bytes": 13371
-    },
-    {
       "name": "Dockerfile",
       "bytes": 641
+    },
+    {
+      "name": "Mako",
+      "bytes": 468
     },
     {
       "name": "Shell",
