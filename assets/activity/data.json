@@ -1,7 +1,7 @@
 {
-  "updated": "22/11/2026",
-  "totalContributions": 131,
-  "activeDays": 36,
+  "updated": "23/11/2026",
+  "totalContributions": 143,
+  "activeDays": 37,
   "publicRepositories": 12,
   "languages": [
     {
@@ -14,7 +14,7 @@
     },
     {
       "name": "TypeScript",
-      "bytes": 449778
+      "bytes": 457104
     },
     {
       "name": "JavaScript",
@@ -22,7 +22,7 @@
     },
     {
       "name": "CSS",
-      "bytes": 150014
+      "bytes": 151549
     },
     {
       "name": "PowerShell",
@@ -34,7 +34,7 @@
     },
     {
       "name": "Astro",
-      "bytes": 41350
+      "bytes": 43285
     },
     {
       "name": "Java",
