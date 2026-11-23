@@ -1,5 +1,6 @@
 import sharp from 'sharp';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 
 const svg = (width, height, content, label) => `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img"><title>${label}</title>${content}</svg>`;
 const font = 'Segoe UI,Arial,sans-serif';
@@ -43,12 +44,15 @@ for (const [name, label, width, icon] of buttons) {
   await writeFile(`assets/buttons/${name}.svg`, svg(width, 44, `<rect x="1" y="1" width="${width - 2}" height="42" rx="8" fill="#21182f" stroke="#8564ba"/><g fill="none" stroke="#ccb7ff" stroke-width="1.6">${icon}</g><text x="45" y="27" fill="#eee5ff" font-family="${font}" font-size="12" font-weight="600" letter-spacing="1">${label}</text>`, label));
 }
 
-const screenshot = async (name) => `data:image/png;base64,${(await sharp(await readFile(`assets/screens/${name}.webp`)).png().toBuffer()).toString('base64')}`;
+const screenshot = async (name) => {
+  const file = existsSync(`assets/screens/${name}.webp`) ? `assets/screens/${name}.webp` : `assets/screens/${name}.png`;
+  return `data:image/png;base64,${(await sharp(await readFile(file)).png().toBuffer()).toString('base64')}`;
+};
 const projects = [
   { id:'fluxo-os', title:'Fluxo OS', tag:'APLICAÇÃO WEB', caption:'DO PRIMEIRO ATENDIMENTO À ENTREGA.', screen:'fluxo' },
   { id:'meu-onze', title:'Meu Onze', tag:'FUTEBOL INTERATIVO', caption:'SEU TIME. SUAS ESCOLHAS.', screen:'meu-onze' },
   { id:'orbita-verde', title:'OrbitaVerde', tag:'PROJETO ACADÊMICO · FIAP', caption:'QUATRO MÓDULOS. UM TEMA.', screen:'orbita-mobile' },
-  { id:'pokeidle-manager', title:'PokeIdle Manager', tag:'DESKTOP &amp; EVENTOS', caption:'UM HOBBY. UM DESAFIO DE ENGENHARIA.', screen:'pokeidle' },
+  { id:'alerta-enchente', title:'AlertaEnchente', tag:'GLOBAL SOLUTION · FIAP · EQUIPE', caption:'DO SENSOR AO CELULAR DO MORADOR.', screen:'alerta-risco' },
 ];
 for (const p of projects) {
   let content = `${defs}<rect x="1" y="1" width="1198" height="658" rx="20" fill="#11101a" stroke="#47345e"/><ellipse cx="600" cy="440" rx="650" ry="460" fill="url(#glow)"/>
@@ -59,6 +63,12 @@ for (const p of projects) {
     <rect x="69" y="272" width="253" height="300" rx="14" fill="#080b0b" stroke="#635573"/>
     <clipPath id="vision"><rect x="77" y="280" width="237" height="284" rx="10"/></clipPath><image href="${await screenshot('orbita-vision')}" x="77" y="235" width="237" height="422" clip-path="url(#vision)"/>
     <g transform="translate(736 90) rotate(7 115 255)"><rect x="-8" y="-8" width="250" height="522" rx="28" fill="#06080a" stroke="#726080"/><clipPath id="phone"><rect width="234" height="506" rx="20"/></clipPath><image href="${await screenshot(p.screen)}" width="234" height="506" clip-path="url(#phone)"/></g>`;
+  } else if (p.id === 'alerta-enchente') {
+    content += `<text x="70" y="200" fill="#edf2f7" font-family="${font}" font-size="53" font-weight="700" letter-spacing="-2">alerta<tspan fill="#7cc4ff">enchente</tspan></text><text x="72" y="238" fill="#b7a9ca" font-family="${font}" font-size="19">API · Machine Learning · Mobile</text>
+    <rect x="69" y="282" width="452" height="222" rx="14" fill="#f5f6f9" stroke="#635573"/>
+    <image href="${await screenshot('alerta-ml')}" x="81" y="292" width="428" height="190"/>
+    <text x="72" y="536" fill="#b7a9ca" font-family="${mono}" font-size="11" letter-spacing="1.5">MODELO X REGRAS SIMPLES · DADOS REAIS DO INMET</text>
+    <g transform="translate(736 90) rotate(7 115 255)"><rect x="-8" y="-8" width="250" height="522" rx="28" fill="#06080a" stroke="#726080"/><clipPath id="phone"><rect width="234" height="506" rx="20"/></clipPath><image href="${await screenshot(p.screen)}" width="234" height="506" preserveAspectRatio="xMidYMin slice" clip-path="url(#phone)"/></g>`;
   } else {
     const imageHeight = p.screen === 'fluxo' ? 1050 : p.screen === 'meu-onze' ? 1225 : 897;
     content += `<rect x="60" y="85" width="1080" height="514" rx="12" fill="#0a0c11" stroke="#70617f"/>

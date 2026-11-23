@@ -14,14 +14,15 @@
 
 Sou **Eduardo Escudero**, estudante de **Engenharia de Software na FIAP**, com foco em desenvolvimento **full stack**. Gosto de conectar interfaces, regras de negócio e dados em aplicações que alguém possa experimentar.
 
-- 🎓 Busco minha **primeira oportunidade de estágio em desenvolvimento de software**.
+- 🎓 6º semestre, conclusão prevista para **dezembro de 2027** · São Paulo, SP.
+- 💼 Busco minha **primeira oportunidade de estágio em desenvolvimento de software** (presencial, híbrido ou remoto).
 - 🛠️ Meu foco atual é **React + TypeScript** e **C#/.NET + PostgreSQL**.
 - ⚽ Meu interesse por futebol também virou projeto: o **Meu Onze**.
 - 🚀 Nos projetos, procuro cuidar da implementação, dos testes, da documentação e da publicação.
 
 ## 💻 Projetos pessoais e acadêmicos
 
-Quatro propostas diferentes, com capturas reais, código disponível e decisões documentadas.
+Quatro projetos em destaque, com capturas reais, código disponível e decisões documentadas.
 
 ### Fluxo OS
 
@@ -71,21 +72,21 @@ Quatro propostas diferentes, com capturas reais, código disponível e decisões
 
 ---
 
-### PokeIdle Manager
+### AlertaEnchente
 
-<a href="https://duduescudero.github.io/projetos/pokeidle-manager/"><img src="assets/projects/pokeidle-manager.png" width="100%" alt="PokeIdle Manager: interface real em Windows Forms com contas e métricas fictícias, apresentada em uma moldura roxa." /></a>
+<a href="https://duduescudero.github.io/projetos/alerta-enchente/"><img src="assets/projects/alerta-enchente.png" width="100%" alt="AlertaEnchente: tela real do aplicativo com o farol de risco e gráfico do modelo de previsão de chuva, em uma moldura roxa." /></a>
 
-**Um hobby que virou um desafio de engenharia.** Gerenciador desktop com múltiplas sessões, métricas, reconexão e operações que aguardam confirmação. Demonstração offline com dados fictícios.
+**Do sensor ao celular do morador.** Sistema de alerta de enchentes feito em equipe na Global Solution da FIAP: APIs em FastAPI e .NET, previsão de chuva intensa com dados reais do INMET e aplicativo mobile com farol de risco.
 
-`Node.js` `JavaScript` `C# / Windows Forms` `WebSocket`
+`Python / FastAPI` `C# / .NET` `PostgreSQL` `scikit-learn` `React Native`
 
-[![Verificações do PokeIdle Manager](https://github.com/duduescudero/pokeidle-manager/actions/workflows/quality.yml/badge.svg)](https://github.com/duduescudero/pokeidle-manager/actions/workflows/quality.yml)
+**[Conhecer o projeto ↗](https://duduescudero.github.io/projetos/alerta-enchente/)** · [API](https://github.com/duduescudero/alerta-enchente-api) · [API .NET](https://github.com/duduescudero/alerta-enchente-dotnet) · [Machine Learning](https://github.com/duduescudero/alerta-enchente-ml) · [Mobile](https://github.com/duduescudero/alerta-enchente-mobile)
 
-**[Conhecer o projeto ↗](https://duduescudero.github.io/projetos/pokeidle-manager/)** · [Código e documentação](https://github.com/duduescudero/pokeidle-manager) · [Decisões técnicas](https://duduescudero.github.io/projetos/pokeidle-manager/)
-
-<sub>Projeto pessoal · Aplicação desktop · Demonstração executada localmente.</sub>
+<sub>Projeto acadêmico · FIAP · Equipe de cinco integrantes · Dados das regiões simulados para a demonstração.</sub>
 
 ---
+
+**Mais projetos:** [ExpenseHub](https://github.com/duduescudero/expensehub) (API de reembolsos com ASP.NET Identity, RabbitMQ e worker em C#) · [IoT Control](https://github.com/duduescudero/iot-control-mqtt) (React Native e MQTT) · [PokeIdle Manager](https://github.com/duduescudero/pokeidle-manager) (desktop orientado a eventos)
 
 O **[portfólio](https://duduescudero.github.io/)** reúne os casos de estudo, capturas e aprendizados. Ele também é um projeto: **Astro, TypeScript, acessibilidade, identidade própria e efeitos opcionais**. [Ver código ↗](https://github.com/duduescudero/duduescudero.github.io)
 
